@@ -11,9 +11,10 @@ CHECKPOINT = "google/vit-base-patch16-224-in21k"
 # CHECKPOINT = "microsoft/beit-base-patch16-224"
 
 MODEL_PATH = f"model_{CHECKPOINT.split('/')[-1]}"
+DATASET_PATH = "npx/gg_2907"
 
 
-def init_dataset(path="./dset/"):
+def init_dataset(path=DATASET_PATH):
     dataset = load_dataset(path)
     print(f"[DEBUG] {dataset}")
     return dataset
